@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-tool-weekly-review"
+version = "0.1.0"
+description = "AI coding tool weekly review — analyze Claude Code/Cursor/Codex usage patterns"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+ai-tool-weekly-review = "ai_tool_weekly_review.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_tool_weekly_review"]
